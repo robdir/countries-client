@@ -10,10 +10,8 @@ const inputStyle = {
 
 export class appContainer extends PureComponent {
 
-    getInitialState() {
-        return {
-            countries: []
-        }
+    state = {
+        countries: []
     }
 
     componentDidMount() {
