@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,IAAK;EACD,IAAI,EAAE,2BAAgB;EACtB,KAAK,EAJS,OAAO",
+"mappings": "AAGA,IAAK;EACD,IAAI,EAAE,2BAAgB;EACtB,KAAK,EAJG,OAAO",
 "sources": ["../scss/index.scss"],
 "names": [],
 "file": "index.css"

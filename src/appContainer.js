@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react'
-
+import './styles/css/appContainer.css'
 
 export class appContainer extends PureComponent {
 
@@ -13,7 +13,8 @@ render() {
     return (
         <div className="main_container">
         <h4> This application renders data from Countries
-             REST API at your request! Search function coming soon... </h4> 
+             REST API at your request!            {<br />}
+             Search function coming soon... </h4> 
         </div>
         )
     }
