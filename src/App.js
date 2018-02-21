@@ -20,6 +20,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
+        <Nav/>
           <Container/>
         </div>
       </MuiThemeProvider>

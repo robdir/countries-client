@@ -1,4 +1,4 @@
-import {React, PureComponent} from 'react'
+import React, {PureComponent} from 'react'
 import AppBar from 'material-ui/AppBar'
 import LanguageIcon from 'material-ui/svg-icons/action/language'
 
