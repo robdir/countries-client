@@ -1,5 +1,7 @@
 import ApiClient from '../api/client'
 import { LOAD_ERROR } from './loading'
+
+
 export const FETCH_COUNTRIES = 'FETCH_COUNTRIES'
 
 const api = new ApiClient()
@@ -10,7 +12,7 @@ export default () => {
             .then(res => {
                 dispatch({ 
                     type: FETCH_COUNTRIES,
-                    payload: res.body
+                    payload: res.text
                 })
             })
             .catch(error => {
