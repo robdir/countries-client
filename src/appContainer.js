@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react'
 import TextField from 'material-ui/TextField'
+import axios from 'axios'
 import RaisedButton from 'material-ui/RaisedButton'
 import './styles/css/appContainer.css'
 
@@ -9,10 +10,24 @@ const inputStyle = {
 
 export class appContainer extends PureComponent {
 
+    getInitialState() {
+        return {
+            countries: []
+        }
+    }
 
-// findCountries(url, request) {
-    
-// }
+    componentDidMount() {
+        const _this = this;
+        const url = "http://localhost:3030/countries"
+        this.serverRequest =
+            axios
+                .get(url)
+                .then(function(result) {
+                    _this.setState({
+                        countries: result.data.countries
+                    });
+                })
+    }
 
 
 render() {
