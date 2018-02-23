@@ -3,7 +3,7 @@ import { fetchCountries } from './actions'
 import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
-import Paper from 'material-ui/Paper'
+import CountrySingle from './countrySingle'
 import './styles/css/appContainer.css'
 
 const inputStyle = {
@@ -23,9 +23,17 @@ export class appContainer extends PureComponent {
         this.props.fetchCountries()
     }
 
+    renderCountry(country, index) {
+        return (
+            <CountrySingle key={index} {...country} />
+        )
+    }
+
 
 render() {
 
+    const {countries} = this.props
+    
     return (
         <div className="main_container">
         <h4> This application renders data from Countries
@@ -38,6 +46,9 @@ render() {
                     ref="search"
                     inputStyle={inputStyle}
                 />
+                < div className="countries_container">
+                    {countries.map(this.renderCountry)}
+                </div>
             </div>
         </div>
         )
