@@ -8,7 +8,6 @@ class Nav extends PureComponent {
         return (
             <AppBar
                 title="Countries"
-                color="secondary"
                 position='sticky'
                 iconElementLeft={<LanguageIcon />}
             />

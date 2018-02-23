@@ -3,11 +3,20 @@ import { fetchCountries } from './actions'
 import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import Paper from 'material-ui/Paper'
 import './styles/css/appContainer.css'
 
 const inputStyle = {
     color: 'black'
 }
+
+const style = {
+    height: 100,
+    width: 100,
+    margin: 20,
+    textAlign: 'center',
+    display: 'inline-block',
+};
 
 export class appContainer extends PureComponent {
     componentWillMount() {
@@ -30,7 +39,6 @@ render() {
                     inputStyle={inputStyle}
                 />
             </div>
-
         </div>
         )
     }
