@@ -7,7 +7,9 @@ class Nav extends PureComponent {
     render() {
         return (
             <AppBar
-                title="Countries, yes"
+                title="Countries"
+                color="secondary"
+                position='sticky'
                 iconElementLeft={<LanguageIcon />}
             />
         )

@@ -1,6 +1,10 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   font: 100% Helvetica, sans-serrif;
   color: #000000;
-  background-color: darkslategray; }
+  background-color: #0375b4; }
 
 /*# sourceMappingURL=index.css.map */

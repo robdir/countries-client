@@ -1,7 +1,12 @@
 .main_container {
   text-align: center;
   padding: 10px;
+  margin: 5px auto;
   border-radius: 6px;
-  background-color: darkGrey; }
+  max-width: fit-content;
+  background-color: #DFDCE3; }
+
+.search_input {
+  margin: 8px auto; }
 
 /*# sourceMappingURL=appContainer.css.map */
