@@ -12,7 +12,7 @@ export default () => {
             .then(res => {
                 dispatch({ 
                     type: FETCH_COUNTRIES,
-                    payload: res.text
+                    payload: JSON.parse(res.text)
                 })
             })
             .catch(error => {
