@@ -8,7 +8,7 @@ class CountrySingle extends PureComponent {
         return (
 
             <div className="countries">
-            <p> {console.log(this.props)} </p>
+            <p> {this.props.countries.map(i => i.name)} </p>
             
             </div>
         )
