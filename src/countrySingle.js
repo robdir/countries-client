@@ -9,13 +9,13 @@ class CountrySingle extends PureComponent {
         return (
 
             <div className="country_single">
-            <p> {this.props.name} </p>
-            <p> {this.props.demonym} </p>
-            <p> {this.props.capital} </p>
-            <p> {this.props.population} </p>
-            <div className="flaggins">
-            <img src={this.props.flag}/>
-            </div>
+                <p> {this.props.name} </p>
+                <p> {this.props.demonym} </p>
+                <p> {this.props.capital} </p>
+                <p> {this.props.population} </p>
+                    <div className="flaggins">
+                        <img src={this.props.flag}/>
+                    </div>
             </div>
         )
     }

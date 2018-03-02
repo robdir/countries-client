@@ -11,9 +11,9 @@ const inputStyle = {
 }
 
 const style = {
-    height: 100,
-    width: 100,
-    margin: 20,
+    height: 75,
+    width: 150,
+    margin: 7.5,
     textAlign: 'center',
     display: 'inline-block',
 };
@@ -36,9 +36,11 @@ render() {
     
     return (
         <div className="main_container">
-        <h4> This application renders data from Countries
-             REST API at your request!            {<br />}
-             Search function coming soon... </h4> 
+            <div className="intro">
+            <h4> This application renders data from Countries
+                REST API at your request!            {<br />}
+                Search function coming soon... </h4> 
+            </div>
             <div className="search_input">
             <p> Enter country or region: </p>
                 <TextField
@@ -46,10 +48,10 @@ render() {
                     ref="search"
                     inputStyle={inputStyle}
                 />
+            </div>
                 < div className="countries_container">
                 {countries.map(this.renderCountry.bind(this))}
                 </div>
-            </div>
         </div>
         )
     }
