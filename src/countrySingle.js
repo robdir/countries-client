@@ -5,11 +5,11 @@ import { connect } from 'react-redux'
 
 class CountrySingle extends PureComponent {
     render() {
+        const {country} = this.props
         return (
 
-            <div className="countries">
-            <p> {this.props.countries.map(i => i.name)} </p>
-            
+            <div className="country_single">
+            {console.log(this.props)}
             </div>
         )
     }

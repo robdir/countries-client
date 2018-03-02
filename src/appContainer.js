@@ -47,6 +47,7 @@ render() {
                     inputStyle={inputStyle}
                 />
                 < div className="countries_container">
+                {countries.map(this.renderCountry.bind(this))}
                 </div>
             </div>
         </div>
