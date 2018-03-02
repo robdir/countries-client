@@ -13,6 +13,9 @@ class CountrySingle extends PureComponent {
             <p> {this.props.demonym} </p>
             <p> {this.props.capital} </p>
             <p> {this.props.population} </p>
+            <div className="flaggins">
+            <img src={this.props.flag}/>
+            </div>
             </div>
         )
     }
