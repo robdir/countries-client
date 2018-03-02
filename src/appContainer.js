@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import CountrySingle from './countrySingle'
+import _ from 'underscore'
 import './styles/css/appContainer.css'
 
 const inputStyle = {
@@ -35,7 +36,12 @@ export class appContainer extends PureComponent {
     }
 
     onInputChange(event) {
-        let newlyDisplayed = this.props.countries.filter(this.props.countries, country => country.name.includes(event.target.value.toLowerCase()));
+        let newlyDisplayed = _.filter(this.props.countries, country => country.name.includes(event.target.value.toLowerCase()));
+
+        this.setState({
+            searchTerm: event.target.value,
+            currentlyDisplayed: newlyDisplayed
+        });
     }
 
     renderCountry(country, index) {
