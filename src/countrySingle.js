@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
+import './styles/css/countrySingle.css'
 
 class CountrySingle extends PureComponent {
     render() {
@@ -9,10 +9,10 @@ class CountrySingle extends PureComponent {
         return (
 
             <div className="country_single">
-                <p> {this.props.name} </p>
-                <p> {this.props.demonym} </p>
-                <p> {this.props.capital} </p>
-                <p> {this.props.population} </p>
+                <p>Name: {this.props.name} </p>
+                <p>Demonym: {this.props.demonym} </p>
+                <p>Capital: {this.props.capital} </p>
+                <p>Population: {this.props.population} </p>
                     <div className="flaggins">
                         <img src={this.props.flag}/>
                     </div>
