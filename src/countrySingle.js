@@ -9,14 +9,14 @@ class CountrySingle extends PureComponent {
         return (
 
             <div className="country_single">
-            {console.log(this.props)}
+            <p> {this.props.name} </p>
+            <p> {this.props.demonym} </p>
+            <p> {this.props.capital} </p>
+            <p> {this.props.population} </p>
             </div>
         )
     }
 }
 
 
-const mapStateToProps = ({ countries }) => ({ countries })
-
-
-export default connect(mapStateToProps)(CountrySingle)
+export default CountrySingle
