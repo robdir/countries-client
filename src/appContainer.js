@@ -19,8 +19,23 @@ const style = {
 };
 
 export class appContainer extends PureComponent {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            searchTerm: '',
+            currentlyDisplayed: this.props.countries
+        };
+
+        this.onInputChange = this.onInputChange.bind(this)
+
+    }
     componentWillMount() {
         this.props.fetchCountries()
+    }
+
+    onInputChange(event) {
+        let newlyDisplayed = this.props.countries.filter(this.props.countries, country => country.name.includes(event.target.value.toLowerCase()));
     }
 
     renderCountry(country, index) {
