@@ -5,17 +5,21 @@ import './styles/css/countrySingle.css'
 
 class CountrySingle extends PureComponent {
     render() {
-        const {country} = this.props
+        const {name, demonym, capital, population, flag} = this.props
         return (
 
             <div className="country_single">
                     <div className="flaggins">
-                        <img src={this.props.flag}/>
+                        <img src={flag}/>
                     </div>
-                <p>Name: {this.props.name} </p>
-                <p>Demonym: {this.props.demonym} </p>
-                <p>Capital: {this.props.capital} </p>
-                <p>Population: {this.props.population} </p>
+                <p>Name: {name} </p>
+
+                <p>Demonym: {demonym} </p>
+                
+                <p>Capital: {capital} </p>
+
+                <p>Population: {population} </p>
+                
                 {console.log(this.props)}
             </div>
         )
