@@ -45,9 +45,9 @@ export class appContainer extends PureComponent {
     }
 
     renderCountry(country, index) {
-        return (
-            <CountrySingle key={index} {...country} />
-        )
+            return (
+                <CountrySingle key={index} {...country} />
+            )
     }
 
 
