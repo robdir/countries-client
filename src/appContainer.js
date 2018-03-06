@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import CountrySingle from './countrySingle'
-import _ from 'underscore'
 import './styles/css/appContainer.css'
 
 const inputStyle = {
@@ -31,7 +30,7 @@ export class appContainer extends PureComponent {
         this.onInputChange = this.onInputChange.bind(this)
 
     }
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchCountries()
     }
 

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import './styles/css/countrySingle.css'
 
 const numberWithCommas = (x) => {
@@ -9,8 +8,17 @@ const numberWithCommas = (x) => {
 
 
 class CountrySingle extends PureComponent {
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        demonym: PropTypes.string.isRequired,
+        capital: PropTypes.string.isRequired,
+        population: PropTypes.string.isRequired,
+        flag: PropTypes.string.isRequired
+    }
+
     render() {
         const {name, demonym, capital, population, flag} = this.props
+
         return (
 
             <div className="country_single">
