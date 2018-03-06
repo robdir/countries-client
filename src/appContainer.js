@@ -67,6 +67,7 @@ render() {
                     REST API at your request!
                 </h4> 
             </div>
+            
             <div className="search_input">
                 <TextField
                     id="search"
@@ -76,6 +77,7 @@ render() {
                     onChange={this.onInputChange}
                 />
             </div>
+
                 {this.state.currentlyDisplayed == 0 ? (
 
                     <div className="no_render">
