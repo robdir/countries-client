@@ -36,7 +36,7 @@ export class appContainer extends PureComponent {
     }
 
     onInputChange(event) {
-        let newlyDisplayed = _.filter(this.props.countries, country => country.name.includes(event.target.value.toLowerCase()));
+        let newlyDisplayed = this.props.countries.filter(country => country.name.toLowerCase().includes(event.target.value.toLowerCase()));
 
         this.setState({
             searchTerm: event.target.value,
