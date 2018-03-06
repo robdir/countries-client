@@ -12,7 +12,7 @@ class CountrySingle extends PureComponent {
         name: PropTypes.string.isRequired,
         demonym: PropTypes.string.isRequired,
         capital: PropTypes.string.isRequired,
-        population: PropTypes.string.isRequired,
+        population: PropTypes.number.isRequired,
         flag: PropTypes.string.isRequired
     }
 

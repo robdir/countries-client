@@ -23,7 +23,6 @@ class App extends Component {
         <div className="App">
         <Nav/>
           <Container/>
-          <Single/>
         </div>
       </MuiThemeProvider>
     );

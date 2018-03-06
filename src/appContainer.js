@@ -30,7 +30,8 @@ export class appContainer extends PureComponent {
         this.onInputChange = this.onInputChange.bind(this)
 
     }
-    componentDidMount() {
+    
+    componentWillMount() {
         this.props.fetchCountries()
     }
 
@@ -59,8 +60,8 @@ render() {
     return (
         <div className="main_container">
             <div className="intro">
-            <h4> This application renders data from Countries
-                REST API at your request!
+                <h4> This application renders data from Countries
+                    REST API at your request!
                 </h4> 
             </div>
             <div className="search_input">
@@ -72,9 +73,15 @@ render() {
                     onChange={this.onInputChange}
                 />
             </div>
-                < div className="countries_container">
-                    {this.renderCountry()}
-                </div>
+            {this.state.currentlyDisplayed == 0 ? (
+                <p> No countries friend </p>
+            ):(
+                    < div className="countries_container">
+                        {this.renderCountry()}
+                    </div>
+            )
+        }
+
         </div>
         )
     }
