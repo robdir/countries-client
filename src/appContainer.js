@@ -68,6 +68,8 @@ render() {
                     id="search"
                     ref="search"
                     inputStyle={inputStyle}
+                    value={this.state.searchTerm}
+                    onChange={this.onInputChange.bind(this)}
                 />
             </div>
                 < div className="countries_container">
