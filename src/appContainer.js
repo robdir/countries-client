@@ -70,7 +70,7 @@ render() {
             <div className="search_input">
                 <TextField
                     id="search"
-                    placeholder="Type country name here"
+                    placeholder="Enter country name here"
                     inputStyle={inputStyle}
                     value={this.state.searchTerm}
                     onChange={this.onInputChange}

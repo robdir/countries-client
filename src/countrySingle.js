@@ -29,7 +29,6 @@ class CountrySingle extends PureComponent {
                 <p>Demonym: {demonym} </p>
                 <p>Capital: {capital} </p>
                 <p>Population: {numberWithCommas(population)} </p>
-                {console.log(this.props)}
             </div>
         )
     }
