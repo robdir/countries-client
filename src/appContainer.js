@@ -61,20 +61,20 @@ render() {
         <div className="main_container">
             <div className="intro">
             <h4> This application renders data from Countries
-                REST API at your request!            {<br />}
-                Search function coming soon... </h4> 
+                REST API at your request!
+                </h4> 
             </div>
             <div className="search_input">
-            <p> Enter country or region: </p>
                 <TextField
                     id="search"
+                    placeholder="Type country name here"
                     inputStyle={inputStyle}
                     value={this.state.searchTerm}
                     onChange={this.onInputChange}
                 />
             </div>
                 < div className="countries_container">
-                {this.renderCountry()}
+                    {this.renderCountry()}
                 </div>
         </div>
         )

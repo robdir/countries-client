@@ -21,6 +21,7 @@ class CountrySingle extends PureComponent {
                 <p>Demonym: {demonym} </p>
                 <p>Capital: {capital} </p>
                 <p>Population: {population} </p>
+                {console.log(this.props)}
             </div>
         )
     }
