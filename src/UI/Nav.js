@@ -8,8 +8,9 @@ class Nav extends PureComponent {
         return (
             <AppBar
                 title="Countries"
-                position='sticky'
+                style={{ position: "sticky" }}
                 iconElementLeft={<LanguageIcon />}
+                iconStyleLeft={{ marginTop: 'auto', marginBottom: 'auto'}}
             />
         )
     }

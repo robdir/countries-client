@@ -76,12 +76,12 @@ render() {
                     onChange={this.onInputChange}
                 />
             </div>
-            {this.state.currentlyDisplayed == 0 ? (
+                {this.state.currentlyDisplayed == 0 ? (
 
-                <div className="no_render">
+                    <div className="no_render">
                         <img src={doggo} id="doggo" />
-                <p> Such empty...</p>
-                </div>
+                        <p> Such empty...</p>
+                    </div>
 
             ):(
                     < div className="countries_container">
