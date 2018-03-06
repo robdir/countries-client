@@ -20,4 +20,14 @@
 .countries_container {
   margin: 15px auto; }
 
+#doggo {
+  width: 200px;
+  height: 200px; }
+
+@keyframes roll {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
 /*# sourceMappingURL=appContainer.css.map */

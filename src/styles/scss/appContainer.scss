@@ -24,3 +24,21 @@
 .countries_container {
     margin: 15px auto;
 }
+
+#doggo {
+    width: 200px;
+    height: 200px;
+    // transform: rotate(360deg);
+    // animation: roll 3s infinite
+
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

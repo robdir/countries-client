@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import CountrySingle from './countrySingle'
+import doggo from './DOGE.png'
 import './styles/css/appContainer.css'
 
 const inputStyle = {
@@ -36,7 +37,9 @@ export class appContainer extends PureComponent {
     }
 
     onInputChange(event) {
-        let newlyDisplayed = this.props.countries.filter(country => country.name.toLowerCase().includes(event.target.value.toLowerCase()));
+        let newlyDisplayed = this.props.countries.filter(country =>
+             country.name.toLowerCase().
+             includes(event.target.value.toLowerCase()));
 
         this.setState({
             searchTerm: event.target.value,
@@ -56,7 +59,7 @@ export class appContainer extends PureComponent {
 render() {
 
     const {countries} = this.props
-    
+
     return (
         <div className="main_container">
             <div className="intro">
@@ -74,7 +77,12 @@ render() {
                 />
             </div>
             {this.state.currentlyDisplayed == 0 ? (
-                <p> No countries friend </p>
+
+                <div className="no_render">
+                        <img src={doggo} id="doggo" />
+                <p> Such empty...</p>
+                </div>
+
             ):(
                     < div className="countries_container">
                         {this.renderCountry()}
