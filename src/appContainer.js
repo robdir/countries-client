@@ -45,9 +45,11 @@ export class appContainer extends PureComponent {
     }
 
     renderCountry(country, index) {
+        return this.state.currentlyDisplayed.map((country) => {
             return (
                 <CountrySingle key={index} {...country} />
             )
+        })
     }
 
 
@@ -66,14 +68,13 @@ render() {
             <p> Enter country or region: </p>
                 <TextField
                     id="search"
-                    ref="search"
                     inputStyle={inputStyle}
                     value={this.state.searchTerm}
-                    onChange={this.onInputChange.bind(this)}
+                    onChange={this.onInputChange}
                 />
             </div>
                 < div className="countries_container">
-                {countries.map(this.renderCountry.bind(this))}
+                {this.renderCountry()}
                 </div>
         </div>
         )
