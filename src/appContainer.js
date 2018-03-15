@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react'
 import { fetchCountries } from './actions'
 import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
-import {CSSTransitionGroup} from 'react-transition-group'
 import CountrySingle from './countrySingle'
 import './styles/css/appContainer.css'
 
@@ -35,8 +34,7 @@ export class appContainer extends PureComponent {
 
     onInputChange(event) {
         let newlyDisplayed = this.props.countries.filter(country =>
-             country.name.toLowerCase().
-             includes(event.target.value.toLowerCase()));
+             country.name.toLowerCase().includes(event.target.value.toLowerCase()));
 
         this.setState({
             searchTerm: event.target.value,
@@ -62,9 +60,6 @@ export class appContainer extends PureComponent {
 
 
 render() {
-
-    const {countries} = this.props
-
     return (
         <div className="main_container">
             <div className="intro">
