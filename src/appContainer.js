@@ -46,7 +46,7 @@ export class appContainer extends PureComponent {
     renderInitial(country, index){
         return this.props.countries.map((country) => {
             return (
-                <CountrySingle key={index} {...country} />
+                <CountrySingle key={index} {...country}/>
             )
         })
     }
@@ -92,7 +92,8 @@ render() {
                     <p> </p>
                 )}
 
-                {this.state.currentlyDisplayed == 0 && this.state.searchTerm !== "" ? (
+                {this.state.currentlyDisplayed == 0
+                && this.state.searchTerm !== "" ? (
 
                     <div className="no_render">
                         <p> Such empty...</p>

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import Transition from 'react-transition-group'
+import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import './styles/css/countrySingle.css'
 
     const numberWithCommas = (x) => {
@@ -23,25 +23,35 @@ class CountrySingle extends PureComponent {
             subregion } = this.props
 
         return (
+            <TransitionGroup>
+                <CSSTransition
+                    key={"country"}
+                    timeout={{ enter: 300, exit: 300 }}
+                    classNames={'fade'}
+                >
 
-            <div className="country_single" id="single">
-                    <div className="flaggins">
-                        <img src={flag} alt="flag"/>
+                    <div className="country_single" id="single">
+                            <div className="flaggins">
+                                <img src={flag} alt="flag"/>
+                            </div>
+                            <div className="info">
+                                <p>Name: {name} </p>
+                                <br/>
+                                <p>Demonym: {demonym} </p>
+                                <br/>
+                                <p>Capital: {capital} </p>
+                                <br />
+                                <p>Population: {numberWithCommas(population)} </p>
+                                <br />
+                                <p>Continent: {region} </p>
+                                <br />
+                                <p>Region: {subregion} </p>
+                            </div>
                     </div>
-                    <div className="info">
-                        <p>Name: {name} </p>
-                        <br/>
-                        <p>Demonym: {demonym} </p>
-                        <br/>
-                        <p>Capital: {capital} </p>
-                        <br />
-                        <p>Population: {numberWithCommas(population)} </p>
-                        <br />
-                        <p>Continent: {region} </p>
-                        <br />
-                        <p>Region: {subregion} </p>
-                    </div>
-            </div>
+
+                </CSSTransition>
+            </TransitionGroup>
+
 
         )
     }

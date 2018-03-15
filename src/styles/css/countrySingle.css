@@ -7,6 +7,20 @@
   display: inline-block;
   box-shadow: 3px 3px 3px 3px #ccc; }
 
+.fade-enter {
+  opacity: 0.01; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in; }
+
+.fade-exit {
+  opacity: 1; }
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
+
 img {
   width: 200px;
   height: 150px; }
