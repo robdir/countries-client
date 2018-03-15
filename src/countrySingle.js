@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import Loading from './UI/Spinner'
 import './styles/css/countrySingle.css'
 
     const numberWithCommas = (x) => {
@@ -7,6 +8,13 @@ import './styles/css/countrySingle.css'
     }
 
 class CountrySingle extends PureComponent {
+    constructor(props){
+        super(props);
+
+        this.state = { isLoading: true }
+
+    }
+
     static propTypes = {
         name: PropTypes.string.isRequired,
         demonym: PropTypes.string.isRequired,
@@ -14,6 +22,12 @@ class CountrySingle extends PureComponent {
         population: PropTypes.number.isRequired,
         flag: PropTypes.string.isRequired
     }
+
+    componentDidMount(){
+        this.setState({isLoading: false})
+    }
+
+
 
     render() {
         const {name, demonym,
@@ -23,10 +37,12 @@ class CountrySingle extends PureComponent {
 
         return (
                         <div className="country_single" id="single">
-                                <div className="flaggins">
-                                    <img src={flag} alt="flag"/>
-                                </div>
+
+                            {this.state.isLoading ? (<Loading/> ) : (
                                 <div className="info">
+                                        <div className="flaggins">
+                                            <img src={flag} alt="flag" />
+                                        </div>
                                     <p>Name: {name} </p>
                                     <br/>
                                     <p>Demonym: {demonym} </p>
@@ -38,7 +54,8 @@ class CountrySingle extends PureComponent {
                                     <p>Continent: {region} </p>
                                     <br />
                                     <p>Region: {subregion} </p>
-                                </div>
+                                </div> 
+                                )}
                         </div>
 
         )
