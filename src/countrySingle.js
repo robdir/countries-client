@@ -23,7 +23,7 @@ class CountrySingle extends PureComponent {
             <div className="country_single">
 
                     <div className="flaggins">
-                        <img src={flag}/>
+                        <img src={flag} alt="flat"/>
                     </div>
                     <div className="info">
                         <p>Name: {name} </p>

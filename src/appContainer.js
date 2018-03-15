@@ -2,9 +2,7 @@ import React, {PureComponent} from 'react'
 import { fetchCountries } from './actions'
 import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
 import CountrySingle from './countrySingle'
-import doggo from './DOGE.png'
 import './styles/css/appContainer.css'
 
 const inputStyle = {
@@ -12,7 +10,6 @@ const inputStyle = {
 }
 
 const style = {
-    height: 75,
     width: 150,
     margin: 7.5,
     textAlign: 'center',
@@ -71,8 +68,9 @@ render() {
             <div className="search_input">
                 <TextField
                     id="search"
-                    placeholder="Enter country name here"
+                    placeholder="Enter country name"
                     inputStyle={inputStyle}
+                    style={style}
                     value={this.state.searchTerm}
                     onChange={this.onInputChange}
                 />
@@ -81,7 +79,6 @@ render() {
                 {this.state.currentlyDisplayed == 0 ? (
 
                     <div className="no_render">
-                        <img src={doggo} id="doggo" />
                         <p> Such empty...</p>
                     </div>
 
