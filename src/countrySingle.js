@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './styles/css/countrySingle.css'
 
-const numberWithCommas = (x) => {
+    const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -16,7 +16,10 @@ class CountrySingle extends PureComponent {
     }
 
     render() {
-        const {name, demonym, capital, population, flag} = this.props
+        const {name, demonym,
+            capital, population,
+            flag, region,
+            subregion } = this.props
 
         return (
 
@@ -27,9 +30,16 @@ class CountrySingle extends PureComponent {
                     </div>
                     <div className="info">
                         <p>Name: {name} </p>
+                        <br/>
                         <p>Demonym: {demonym} </p>
+                        <br/>
                         <p>Capital: {capital} </p>
+                        <br />
                         <p>Population: {numberWithCommas(population)} </p>
+                        <br />
+                        <p>Continent: {region} </p>
+                        <br />
+                        <p>Region: {subregion} </p>
                     </div>
             </div>
 
