@@ -4,7 +4,7 @@ import './styles/css/countrySingle.css'
 
     const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+    }
 
 class CountrySingle extends PureComponent {
     static propTypes = {
@@ -13,6 +13,11 @@ class CountrySingle extends PureComponent {
         capital: PropTypes.string.isRequired,
         population: PropTypes.number.isRequired,
         flag: PropTypes.string.isRequired
+    }
+
+    onHover(event) {
+        const divClass = document.getElementByClassName("country_single").classList;
+        divClass.add("highlighted")
     }
 
     render() {
@@ -26,7 +31,7 @@ class CountrySingle extends PureComponent {
             <div className="country_single">
 
                     <div className="flaggins">
-                        <img src={flag} alt="flat"/>
+                        <img src={flag} alt="flag"/>
                     </div>
                     <div className="info">
                         <p>Name: {name} </p>
