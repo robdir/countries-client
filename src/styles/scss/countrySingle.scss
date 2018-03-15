@@ -1,9 +1,9 @@
 .country_single {
     padding: 10px;
     margin: 15px;
-    border: 2px #0375b4 solid;
+    border: 1px #0375b4 solid;
     border-radius: 7px;
-    background-color: darkgray;
+    background-color: #DFDCE3;
     display: inline-block;
     box-shadow: 3px 3px 3px 3px #ccc
 }
@@ -15,4 +15,8 @@ img {
 
 .flaggins {
     padding-bottom: 10px;
+}
+
+.info {
+    padding: 15px
 }
