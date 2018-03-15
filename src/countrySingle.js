@@ -14,12 +14,7 @@ class CountrySingle extends PureComponent {
         population: PropTypes.number.isRequired,
         flag: PropTypes.string.isRequired
     }
-
-    onHover(event) {
-        const divClass = document.getElementByClassName("country_single").classList;
-        divClass.add("highlighted")
-    }
-
+    
     render() {
         const {name, demonym,
             capital, population,
@@ -28,8 +23,7 @@ class CountrySingle extends PureComponent {
 
         return (
 
-            <div className="country_single">
-
+            <div className="country_single" id="single">
                     <div className="flaggins">
                         <img src={flag} alt="flag"/>
                     </div>
