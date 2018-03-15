@@ -92,7 +92,7 @@ render() {
                     <p> </p>
                 )}
 
-                {this.state.currentlyDisplayed == 0 ? (
+                {this.state.currentlyDisplayed == 0 && this.state.searchTerm !== "" ? (
 
                     <div className="no_render">
                         <p> Such empty...</p>

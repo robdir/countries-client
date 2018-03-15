@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import Transition from 'react-transition-group'
 import './styles/css/countrySingle.css'
 
     const numberWithCommas = (x) => {
@@ -14,7 +15,7 @@ class CountrySingle extends PureComponent {
         population: PropTypes.number.isRequired,
         flag: PropTypes.string.isRequired
     }
-    
+
     render() {
         const {name, demonym,
             capital, population,
