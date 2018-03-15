@@ -5,22 +5,15 @@
   border-radius: 7px;
   background-color: #DFDCE3;
   display: inline-block;
-  box-shadow: 3px 3px 3px 3px #ccc; }
+  box-shadow: 3px 3px 3px 3px #ccc;
+  animation-name: fade-in;
+  animation-duration: 0.75s; }
 
-.fade-enter {
-  opacity: 0.01; }
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in; }
-
-.fade-exit {
-  opacity: 1; }
-
-.fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in; }
-
+@keyframes fade-in {
+  from {
+    opacity: 0.01; }
+  to {
+    opacity: 1; } }
 img {
   width: 200px;
   height: 150px; }

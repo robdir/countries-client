@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react'
 import { fetchCountries } from './actions'
 import {connect} from 'react-redux'
 import TextField from 'material-ui/TextField'
+import {CSSTransitionGroup} from 'react-transition-group'
 import CountrySingle from './countrySingle'
 import './styles/css/appContainer.css'
 
