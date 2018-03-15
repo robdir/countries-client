@@ -22,11 +22,10 @@ export class appContainer extends PureComponent {
 
         this.state = {
             searchTerm: '',
-            currentlyDisplayed: this.props.countries
+            currentlyDisplayed: this.props.countries,
         };
 
         this.onInputChange = this.onInputChange.bind(this)
-
     }
     
     componentWillMount() {
@@ -42,6 +41,14 @@ export class appContainer extends PureComponent {
             searchTerm: event.target.value,
             currentlyDisplayed: newlyDisplayed
         });
+    }
+
+    renderInitial(country, index){
+        return this.props.countries.map((country) => {
+            return (
+                <CountrySingle key={index} {...country} />
+            )
+        })
     }
 
     renderCountry(country, index) {
@@ -60,8 +67,8 @@ render() {
     return (
         <div className="main_container">
             <div className="intro">
-                <h4> This application renders data from Countries
-                    REST API at your request!
+                <h4> Displayed are a list of countries,
+                    please use to search box to filter the list.
                 </h4> 
             </div>
 
@@ -75,6 +82,15 @@ render() {
                     onChange={this.onInputChange}
                 />
             </div>
+
+                {this.state.searchTerm == "" ? (
+
+                    <div className="countries_container">
+                        {this.renderInitial()}
+                    </div>
+                ):(
+                    <p> </p>
+                )}
 
                 {this.state.currentlyDisplayed == 0 ? (
 
